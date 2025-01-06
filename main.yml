@@ -1,0 +1,38 @@
+---
+- name: Setup Windows PC Machine Environment
+  hosts: all
+  connection: local
+  become: false
+
+  tasks:
+    - name: Install software with Chocolatey
+      chocolatey.chocolatey.win_chocolatey:
+        name:
+          - adobereader
+          - googlechrome
+          - zoom
+          - vcredist140
+          - jre8
+          - 7zip.install
+          - dotnetfx
+          - teamviewer
+          - vlc
+          - openssh
+          - skype
+          - k-litecodecpackfull
+          - office365proplus
+          #- brave
+          #- qbittorrent
+          #- blender
+          #- obs-studio.install
+          #- rufus
+          #- discord.install
+          #- steam
+          #
+          #- vagrant
+          #- neovim
+          #- gh
+          #- docker-compose
+          #- qemu
+          - ublockorigin-chrome
+          -
